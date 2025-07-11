@@ -61,8 +61,8 @@ export function MovieRow({ title, movies, onPlay, onInfo }: MovieRowProps) {
           className="flex space-x-4 px-4 md:px-8 overflow-x-auto scrollbar-hide"
           style={{ scrollBehavior: 'smooth' }}
         >
-          {movies.map((movie) => (
-            <div key={movie.id} className="flex-shrink-0 w-48 md:w-56">
+          {movies.map((movie, index) => (
+            <div key={`${title}-${movie.id}-${index}`} className="flex-shrink-0 w-48 md:w-56">
               <MovieCard
                 movie={movie}
                 onPlay={onPlay}

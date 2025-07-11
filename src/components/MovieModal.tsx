@@ -1,6 +1,6 @@
 import { X, Play, Plus, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Button } from './ui/button';
-import { Dialog, DialogContent, DialogHeader } from './ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import { Movie } from '../types/movie';
 
 interface MovieModalProps {
@@ -52,9 +52,9 @@ export function MovieModal({ movie, isOpen, onClose, onPlay }: MovieModalProps) 
           {/* Content */}
           <div className="p-6">
             <DialogHeader>
-              <h2 className="text-3xl font-bold text-white mb-4">
+              <DialogTitle className="text-3xl font-bold text-white mb-4">
                 {movie.title}
-              </h2>
+              </DialogTitle>
             </DialogHeader>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

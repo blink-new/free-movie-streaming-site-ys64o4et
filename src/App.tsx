@@ -83,7 +83,7 @@ function App() {
           {filteredCategories.map((category) => (
             <MovieRow
               key={category.id}
-              title={category.name}
+              title={category.title}
               movies={category.movies}
               onPlay={handlePlay}
               onInfo={handleInfo}
